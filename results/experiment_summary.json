@@ -1,0 +1,8 @@
+{
+  "mrr": 1.0,
+  "ndcg_at_5": 1.0,
+  "num_queries": 10,
+  "recall_at_5": 1.0,
+  "test_units": 36,
+  "train_units": 142
+}
