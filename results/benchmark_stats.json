@@ -1,0 +1,252 @@
+{
+  "average_repository_size_units": 657.25,
+  "avg_candidates_per_query": 1036.7918454935623,
+  "candidate_count_distribution": {
+    "max": 1200,
+    "mean": 1036.7918454935623,
+    "median": 1200.0,
+    "min": 626
+  },
+  "candidate_pool_policy": "The same complete code-unit index is shared by queries within a repository by design; no per-query random sampling or relevance-based filtering is applied.",
+  "candidate_sampling": "none; exhaustive repository-local index",
+  "code_units": 5258,
+  "dev": {
+    "code_units": 1530,
+    "files": 100,
+    "queries": 643,
+    "repositories": 2
+  },
+  "evaluation_duplicate_exclusions": {
+    "dev_duplicate_code": 6,
+    "dev_duplicate_code_queries": 6,
+    "dev_duplicate_queries": 27,
+    "test_duplicate_code": 1,
+    "test_duplicate_code_queries": 10,
+    "test_duplicate_queries": 15,
+    "train_duplicate_code_queries": 39,
+    "train_duplicate_queries": 43
+  },
+  "files": 273,
+  "hard_negative_profile": {
+    "counts_across_test_query_candidate_pairs": {
+      "lexically_similar_top20": 18472,
+      "same_file": 60273,
+      "same_kind": 379458,
+      "same_module": 60273,
+      "same_parent": 18653,
+      "semantic_top20_without_shared_import_or_call": 25,
+      "semantically_similar_top20": 17870,
+      "shared_calls": 87519,
+      "shared_imports": 962251,
+      "shared_inheritance_bases": 1312
+    },
+    "interpretation_limit": "These are observable lexical/structural similarity proxies. Static metadata cannot establish that a candidate has the same behavior or that a human would judge it irrelevant.",
+    "mean_per_query": {
+      "lexically_similar_top20": 19.819742489270386,
+      "same_file": 64.6706008583691,
+      "same_kind": 407.1437768240343,
+      "same_module": 64.6706008583691,
+      "same_parent": 20.013948497854077,
+      "semantic_top20_without_shared_import_or_call": 0.02682403433476395,
+      "semantically_similar_top20": 19.173819742489272,
+      "shared_calls": 93.90450643776823,
+      "shared_imports": 1032.4581545064377,
+      "shared_inheritance_bases": 1.407725321888412
+    },
+    "query_count": 932
+  },
+  "languages": {
+    "python": 5258
+  },
+  "largest_repository": {
+    "code_units": 1200,
+    "name": "pydantic"
+  },
+  "leakage_audit": {
+    "code_duplicate_count": 118,
+    "code_duplicate_cross_split_count": 4,
+    "code_duplicates_cross_splits": {
+      "def close(self) -> none: pass": [
+        "train:urllib3:urllib3::src.urllib3.http2.connection.HTTP2Response.close",
+        "train:httpx:httpx::httpx._transports.base.BaseTransport.close",
+        "dev:rich:rich::rich._null_file.NullFile.close"
+      ],
+      "def close(self) -> none: raise notimplementederror()": [
+        "train:urllib3:urllib3::src.urllib3.response.BaseHTTPResponse.close",
+        "dev:httpcore:httpcore::httpcore._backends.base.NetworkStream.close",
+        "dev:httpcore:httpcore::httpcore._sync.interfaces.ConnectionInterface.close"
+      ],
+      "def seekable(self) -> bool: return false": [
+        "train:urllib3:urllib3::src.urllib3.contrib.emscripten.fetch._ReadStream.seekable",
+        "train:urllib3:urllib3::src.urllib3.contrib.emscripten.fetch._JSPIReadStream.seekable",
+        "dev:rich:rich::rich._null_file.NullFile.seekable"
+      ],
+      "def writable(self) -> bool: return false": [
+        "train:urllib3:urllib3::src.urllib3.contrib.emscripten.fetch._ReadStream.writable",
+        "train:urllib3:urllib3::src.urllib3.contrib.emscripten.fetch._JSPIReadStream.writable",
+        "dev:rich:rich::rich._null_file.NullFile.writable",
+        "dev:rich:rich::rich.progress._Reader.writable"
+      ]
+    },
+    "query_duplicate_count": 69,
+    "query_duplicate_cross_split_count": 0,
+    "query_duplicates_cross_splits": {},
+    "repo_overlap": {
+      "dev_test": [],
+      "train_dev": [],
+      "train_test": []
+    }
+  },
+  "negative_method": "all other indexed units in the same repository",
+  "positive_candidates_per_query": 1.0,
+  "positive_method": "query-owning code unit, repository-qualified ID",
+  "queries": 2446,
+  "query_counts_after_exact_cross_split_deduplication": {
+    "dev": 643,
+    "test": 932,
+    "train": 871
+  },
+  "query_leakage_profile": {
+    "query_contains_exact_target_symbol": 0,
+    "query_contains_file_path": 0,
+    "query_contains_unique_code_identifier": 0,
+    "query_intersects_nonunique_code_identifiers": 661,
+    "query_is_exact_substring_of_any_candidate_code": 0,
+    "query_is_exact_substring_of_candidate_code": 0
+  },
+  "query_method": "docstring text with target symbols, documented parameters, and repository-unique code identifiers removed; no synthetic fallback queries",
+  "raw_query_counts_before_deduplication": {
+    "dev": 674,
+    "test": 958,
+    "train": 916
+  },
+  "repositories": 8,
+  "repository_metadata": {
+    "click": {
+      "collected_at": "local-run",
+      "commit": "2247b35ea1c47c727d7a06e51fa280e12a863ff6",
+      "files": 91,
+      "language": "python",
+      "license": "unknown",
+      "repo": "click",
+      "url": "https://github.com/pallets/click.git"
+    },
+    "flask": {
+      "collected_at": "local-run",
+      "commit": "d73fa1cdcbd8b1465c151db8924ba58b1dd14e35",
+      "files": 83,
+      "language": "python",
+      "license": "unknown",
+      "repo": "flask",
+      "url": "https://github.com/pallets/flask.git"
+    },
+    "httpcore": {
+      "collected_at": "local-run",
+      "commit": "10a658221deb38a4c5b16db55ab554b0bf731707",
+      "files": 55,
+      "language": "python",
+      "license": "unknown",
+      "repo": "httpcore",
+      "url": "https://github.com/encode/httpcore.git"
+    },
+    "httpx": {
+      "collected_at": "local-run",
+      "commit": "b5addb64f0161ff6bfe94c124ef76f6a1fba5254",
+      "files": 60,
+      "language": "python",
+      "license": "unknown",
+      "repo": "httpx",
+      "url": "https://github.com/encode/httpx.git"
+    },
+    "pydantic": {
+      "collected_at": "local-run",
+      "commit": "98e9ecec0a5e56cfc92a8882eca19d525340ba98",
+      "files": 453,
+      "language": "python",
+      "license": "unknown",
+      "repo": "pydantic",
+      "url": "https://github.com/pydantic/pydantic.git"
+    },
+    "requests": {
+      "collected_at": "local-run",
+      "commit": "611c6162cbc4ac2020a2f91c7cfa4f3abf9bbb60",
+      "files": 37,
+      "language": "python",
+      "license": "unknown",
+      "repo": "requests",
+      "url": "https://github.com/psf/requests.git"
+    },
+    "rich": {
+      "collected_at": "local-run",
+      "commit": "9d8f9a372cc5916fd4781fec207ced7ddac2f08f",
+      "files": 213,
+      "language": "python",
+      "license": "unknown",
+      "repo": "rich",
+      "url": "https://github.com/Textualize/rich.git"
+    },
+    "urllib3": {
+      "collected_at": "local-run",
+      "commit": "a164d79c8cf760f222daa2dc7f67d0e1ca7fb17c",
+      "files": 82,
+      "language": "python",
+      "license": "unknown",
+      "repo": "urllib3",
+      "url": "https://github.com/urllib3/urllib3.git"
+    }
+  },
+  "repository_overlap": {
+    "dev_test": [],
+    "train_dev": [],
+    "train_test": []
+  },
+  "repository_size_distribution": {
+    "max": 1200,
+    "mean": 657.25,
+    "median": 574.0,
+    "min": 303
+  },
+  "repository_size_units": {
+    "max": 1200,
+    "mean": 657.25,
+    "min": 303
+  },
+  "repository_sizes_code_units": {
+    "click": 627,
+    "flask": 404,
+    "httpcore": 513,
+    "httpx": 521,
+    "pydantic": 1200,
+    "requests": 303,
+    "rich": 1017,
+    "urllib3": 673
+  },
+  "smallest_repository": {
+    "code_units": 303,
+    "name": "requests"
+  },
+  "test": {
+    "code_units": 1827,
+    "files": 78,
+    "queries": 932,
+    "repositories": 2
+  },
+  "test_candidate_pool_size_distribution": {
+    "max": 1200,
+    "mean": 1036.7918454935623,
+    "median": 1200.0,
+    "min": 626
+  },
+  "test_positive_count_distribution": {
+    "max": 1,
+    "mean": 1.0,
+    "median": 1,
+    "min": 1
+  },
+  "train": {
+    "code_units": 1901,
+    "files": 95,
+    "queries": 871,
+    "repositories": 4
+  }
+}
